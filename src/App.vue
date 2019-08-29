@@ -39,7 +39,7 @@ export default {
         width: 100%;
         padding-top: 40px;
         padding-bottom: 50px;
-        overflow: hidden;
+        overflow-x: hidden;
     }
     .v-enter {
         opacity: 0;
@@ -53,6 +53,5 @@ export default {
     .v-enter-active,
     .v-leave-active {
         transition: all .5s ease;
-
     }
 </style>

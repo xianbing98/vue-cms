@@ -3,12 +3,9 @@ import app from './App.vue'
 
 // router
 import VueRouter from 'vue-router'
-import routes from './router/routes.js'
-Vue.use(VueRouter);
-const router = new VueRouter({
-    routes,
-    linkActiveClass: 'mui-active'
-})
+Vue.use(VueRouter)
+import router from './router/routes.js'
+
 
 // vue-resource
 import VueResource from 'vue-resource'
