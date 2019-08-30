@@ -23,6 +23,9 @@ Vue.component(SwipeItem.name, SwipeItem);
 import '../plugin/mui/css/mui.min.css'
 import '../plugin/mui/fonts/icons-extra.css'
 
+// moment 日期格式化插件
+import moment from 'moment'
+
 
 const vm = new Vue({
     el: "#app",

@@ -14,6 +14,7 @@
 	</div>
 </template>
 <script>
+import moment from 'moment'
 export default {
 	data() {
 		return {
@@ -35,7 +36,7 @@ export default {
 	filters: {
 		// 过滤器名称也可以用 引号 包起来
 		'timefilter': function(value) {
-			return value.replace('T', ' ').replace('.000Z', '');
+			return moment(value).format('YYYY-DD-MM HH:mm:ss');
 		}
 	}
 }
