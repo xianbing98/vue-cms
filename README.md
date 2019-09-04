@@ -17,7 +17,7 @@ Vue.filter('timefilter', function() {
 const vm = new Vue({
 	el: "#app",
 	data: {
-		msg: "这是父组件数据“
+		msg: "这是父组件数据"
 	},
 	components: {
 		'son': {

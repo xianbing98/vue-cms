@@ -5,7 +5,7 @@
 		<textarea placeholder="最多哔哔120字" maxlength="120"></textarea>
 		<mt-button type="primary" size="large">发表评论</mt-button>
 		<div class="cmts">
-			<div class="cmts-item" v-for="(item, index) in commentlist" :key="item.add_time">
+			<div class="cmts-item" v-for="(item, index) in commentlist" :key="index">
 				<div class="tit">
 					<span>{{item.user_name}}</span>
 					<span>{{item.add_time | timefilter}}</span>
