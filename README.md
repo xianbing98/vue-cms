@@ -1,5 +1,11 @@
 ## vue-cms 项目学习
+
 ### timefilter使用全局过滤器，方便复用
+```js
+Vue.filter('timefilter', function() {
+	return moment(value).format('YYYY-MM-DD HH:mm:ss');
+})
+```
 
 ### 父组件向子组件传值，用props接收
 ```html
