@@ -2,19 +2,19 @@
 	<div class="container">
 		<ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-media" v-for="item in newslist" :key="item.id">
-				<a href="javascript:;">
+				<router-link :to="'/home/newsinfo/' + item.id">
 					<img class="mui-media-object mui-pull-left" :src="item.img_url">
 					<div class="mui-media-body">
 						<h3 class='mui-ellipsis'>{{item.title}}</h3>
 						<p><span>发表时间：{{item.add_time | timefilter}}</span><span>点击：{{item.click}} 次</span></p>
 					</div>
-				</a>
+				</router-link>
 			</li>
 		</ul>
 	</div>
 </template>
 <script>
-import moment from 'moment'
+// import moment from 'moment'
 export default {
 	data() {
 		return {
@@ -33,12 +33,12 @@ export default {
 			})
 		}
 	},
-	filters: {
-		// 过滤器名称也可以用 引号 包起来
-		'timefilter': function(value) {
-			return moment(value).format('YYYY-DD-MM HH:mm:ss');
-		}
-	}
+	// filters: {
+	// 	// 过滤器名称也可以用 引号 包起来
+	// 	'timefilter': function(value) {
+	// 		return moment(value).format('YYYY-DD-MM HH:mm:ss');
+	// 	}
+	// }
 }
 </script>
 <style lang="less" scoped>

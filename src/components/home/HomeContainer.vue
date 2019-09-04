@@ -35,19 +35,18 @@
 				</router-link>
 			</li>
 			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
+				<router-link to="/home/videolist">
 					<img src="../../images/homelist05.png" alt="">
 					<div class="mui-media-body">视频专区</div>
-				</a>
+				</router-link>
 			</li>
 			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
+				<router-link to="/home/contactus">
 					<img src="../../images/homelist06.png" alt="">
 					<div class="mui-media-body">联系我们</div>
-				</a>
+				</router-link>
 			</li>
 		</ul>
-		<router-view></router-view>
 	</div>
 	
 </template>

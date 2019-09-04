@@ -35,6 +35,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+    html, body {
+        height: 100%;
+    }
     .app-container {
         width: 100%;
         padding-top: 40px;
