@@ -2,9 +2,24 @@
 	<div class="container">
 		<div class="lunbo">
 			<mt-swipe :auto="4000">
-				<mt-swipe-item v-for="item in lunboList" :key="item.id">
+				<!-- <mt-swipe-item v-for="item in lunboList" :key="item.id">
 					<a :href="item.url">
 						<img :src="item.img" alt="">
+					</a>
+				</mt-swipe-item> -->
+				<mt-swipe-item>
+					<a href="javascript:;">
+						<img src="https://tse1-mm.cn.bing.net/th?id=OET.909ecef721df4faabcd06f6a41333573&w=272&h=135&c=7&rs=1&o=5&pid=1.9" alt="">
+					</a>
+				</mt-swipe-item>
+				<mt-swipe-item >
+					<a href="javascript:;">
+						<img src="https://tse1-mm.cn.bing.net/th?id=OET.2c4615f7694e4217add6483c3b3876f4&w=272&h=135&c=7&rs=1&o=5&pid=1.9" alt="">
+					</a>
+				</mt-swipe-item>
+				<mt-swipe-item >
+					<a href="javascript:;">
+						<img src="https://tse1-mm.cn.bing.net/th?id=OET.03c2e3ba05664098b2b45b0f688eabad&w=272&h=135&c=7&rs=1&o=5&pid=1.9" alt="">
 					</a>
 				</mt-swipe-item>
 			</mt-swipe>
@@ -64,7 +79,7 @@ export default {
 	},
 	methods: {
 		getlunbo() {
-			this.$http.get('http://www.liulongbin.top:3005/api/getlunbo').then((data) => {
+			this.$http.get('api/getlunbo').then((data) => {
 				if(data.body.status == 0) {
 					this.lunboList = data.body.message;
 				}

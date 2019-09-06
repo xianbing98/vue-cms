@@ -10,6 +10,7 @@ import FeedbackList from '../components/home/FeedbackList/FeedbackList.vue'
 import VideoList from '../components/home/VideoList/VideoList.vue'
 import ContactUs from '../components/home/ContactUs/ContactUs.vue'
 import NewsInfo from '../components/home/NewsList/NewsInfo.vue'
+import PhotoInfo from '../components/home/PhotoList/PhotoInfo.vue'
 
 const router = new VueRouter({
     routes: [
@@ -32,6 +33,10 @@ const router = new VueRouter({
 		{
 			path: '/home/photolist',
 			component: PhotoList
+		},
+		{
+			path: '/home/photoinfo/:id',
+			component: PhotoInfo
 		},
 		{
 			path: '/home/goodslist',

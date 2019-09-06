@@ -21,8 +21,12 @@ export default {
 	},
 	methods: {
 		getnewsinfo() {
-			this.$http.get('http://www.liulongbin.top:3005/api/getnew/' + this.id).then(function(data) {
-				this.newinfo = data.body.message[0];
+			this.$http
+			.get('api/getnew/' + this.id)
+			.then(function(result) {
+				if(result.body.status == 0) {
+					this.newinfo = result.body.message[0];
+				}
 			})
 		}
 	},

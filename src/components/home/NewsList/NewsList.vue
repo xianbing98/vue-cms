@@ -26,19 +26,13 @@ export default {
 	},
 	methods: {
 		getnewslist() {
-			this.$http.get('http://www.liulongbin.top:3005/api/getnewslist').then(data => {
+			this.$http.get('api/getnewslist').then(data => {
 				if(data.body.status == 0) {
 					this.newslist = data.body.message
 				}
 			})
 		}
 	},
-	// filters: {
-	// 	// 过滤器名称也可以用 引号 包起来
-	// 	'timefilter': function(value) {
-	// 		return moment(value).format('YYYY-DD-MM HH:mm:ss');
-	// 	}
-	// }
 }
 </script>
 <style lang="less" scoped>
