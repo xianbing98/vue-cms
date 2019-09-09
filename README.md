@@ -37,7 +37,7 @@ const webpackConfig = originalConfig // 原来的 module.exports 代码赋值给
 module.exports = vuxLoader.merge(webpackConfig, {
 	plugins: ['vux-ui']
 })
-	```
+```
 
 2.这时，又报下面的错：
 ```js
