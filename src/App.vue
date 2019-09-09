@@ -1,7 +1,11 @@
 <template>
     <div class="app-container">
         <!-- 头部 -->
-        <mt-header fixed title="固定在顶部"></mt-header>
+        <mt-header title="固定在顶部">
+            <router-link to="/" slot="left">
+                <mt-button icon="back">返回</mt-button>
+            </router-link>
+        </mt-header>
 
         <!-- 中间 ruoter-view -->
         <transition>
@@ -40,7 +44,7 @@ export default {
     }
     .app-container {
         width: 100%;
-        padding-top: 40px;
+        // padding-top: 40px;
         padding-bottom: 50px;
         overflow-x: hidden;
     }

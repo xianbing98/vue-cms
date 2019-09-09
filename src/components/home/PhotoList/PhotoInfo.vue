@@ -3,15 +3,13 @@
 		<div class="title">
 			<h3>{{photoinfo.title}}</h3>
 			<p>
-				<span>发表时间：{{photoinfo.add_tiem | timefilter}}</span>
+				<span>发表时间：{{photoinfo.add_time | timefilter}}</span>
 				<span>点击：{{photoinfo.click}} 次</span>
 			</p>
 		</div>
 		<hr>
 		<div class="imgs">
-			<vue-preview :slides="thumimgs" v-for="item in thumimgs" :key="item.url">
-				<img :src="item.src" alt="">
-			</vue-preview>
+			<vue-preview :slides="thumimgs" ></vue-preview>
 		</div>
 		<div class="description" v-html="photoinfo.content"></div>
 		<my-comment :id="this.id"></my-comment>
@@ -45,7 +43,8 @@ export default {
 					let imgs = result.body.message;
 					imgs.forEach(function(item, i) {
 						item.w = 600;
-						item.h = 400;
+						item.h = 600;
+						item.msrc = item.src;
 					})
 					this.thumimgs = imgs;
 				}
@@ -57,8 +56,9 @@ export default {
 	}
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 	.photoinfo_container {
+		padding: 0 5px;
 
 		.title {
 
@@ -80,11 +80,29 @@ export default {
 		}
 
 		.imgs {
+			display: flex;
+			flex-wrap: wrap;
 
-			a {
-				display: inline-block;
-				width: 100%;
+			figure {
+				width: 30%;
+				float: left;
+				margin: 5px;
+				border-radius: 5px;
+				overflow: hidden;
+				box-shadow: 0 0 5px #555;
+
+				a {
+					display: block;
+					width: 100%;
+
+					img {
+						width: 100%;
+					}
+				}
 			}
+
+
+
 		}
 	}
 </style>
